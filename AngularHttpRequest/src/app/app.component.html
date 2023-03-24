@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="header bg-orange-300 p-4 text-2xl font-bold">
+    Manage Products
+    
+  </div>
+  
+  <div class="border flex p-4">
+    <div class="p-4 w-1/2">
+      <h2>Create Product</h2>
+      <form #productsForm="ngForm" class="form" (ngSubmit)="onProductCreate(productsForm.value)">
+        <div class="flex px-4 mt-4">
+          <label class="w-1/2" for="product-name">Product Name:</label>
+          <input class="border ml-3" type="text" id="product-name" name="pName" ngModel>
+        </div>
+        <div class="flex px-4 mt-4">
+          <label class="w-1/2" for="product-description">Product Description:</label>
+          <input class="border ml-3" type="text" id="product-description" name="desc"  ngModel>
+        </div>
+        <div class="flex px-4 mt-4">
+          <label class="w-1/2" for="product-price">Product Price:</label>
+          <input class="border ml-3" type="text" id="product-price" name="price"  ngModel>
+        </div>
+        <input class="text-white cursor-pointer bg-fuchsia-600 rounded-md p-3 mt-5 ml-5 hover:bg-fuchsia-700" type="submit" value="{{editMode?'Update Product':'Add Product'}}" />
+      </form>
+    </div>
+    <div class="w-1/2">
+         <p class="text-xl font-bold"> All Products</p>
+      <table class="table-auto	">
+        <thead class="border-dashed ">
+          <tr>
+            <th class="p-40">#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngIf="allProducts.length<1 && !isFetching">
+            <td  colspan="5">No Product Available</td>
+          </tr>
+          <tr *ngIf="errMessage">
+            <td  colspan="5">{{errMessage}}</td>
+          </tr>
+          <tr *ngIf="isFetching && !errMessage">
+            <td  colspan="5">Loading....</td>
+          </tr>
+          <tr *ngFor="let product of allProducts;index as i">
+            <td>{{i+1}}</td>
+            <td>{{product.pName}}</td>
+            <td>{{product.desc}}</td>
+            <td>{{product.price}}</td>
+            <td><input class="bg-red-500 p-2 rounded-md hover:bg-red-600" type="submit" value="Delete" (click)="onDeleteProduct(product.id)"></td>
+            <td><input class="bg-blue-500 p-2 rounded-md hover:bg-blue-600" type="submit" value="Edit" (click)="onEditClicked(product.id)"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <input class="bg-fuchsia-600 cursor-pointer text-white rounded-md p-2 mt-5 ml-5 hover:bg-fuchsia-700" type="submit" value="Fetch Product" (click)="onProductsFetch()">
+      <input class="bg-fuchsia-600 cursor-pointer text-white rounded-md p-2 mt-5 ml-5 hover:bg-fuchsia-700" type="submit" value="clear Product" (click)="onDeleteAllProduct()">
+    </div>
+  </div>
+</div>

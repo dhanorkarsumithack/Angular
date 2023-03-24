@@ -1,0 +1,29 @@
+.video-card{
+    background-color: antiquewhite;
+    height: 330px;
+    width: 220px;
+    margin: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.container{
+    display: flex;
+}
+
+.details{
+    display: flex;
+}
+i{
+    font-size: 14px;
+    color: #FF5722;
+}
+.highlight{
+    background-color: #ddd;
+    border: #FF5722 3px solid;
+    border-radius: 5px;
+}
+
+.video-data{
+    margin: 15px;
+}

@@ -1,0 +1,14 @@
+<div>
+    <h3>viewchild/viewchildren</h3>
+
+    <p #highlight>this is an important message </p>
+    <span #highlight>this is an important message </span>
+
+    <h3>counter {{child?.counter}}</h3>
+    <div>
+        <button (click)="inc()">Increment</button>
+        <button (click)="dec()">Decrement</button>
+    </div>
+
+    <app-counter #childview></app-counter>
+</div>

@@ -1,0 +1,12 @@
+{
+    "employee":[
+        {
+            "username":"Sumit@neml",
+            "password":"1234"
+        },
+        {
+            "username":"Shubham@neml",
+            "password":"1345"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+.container{
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+button{
+    width: 100px;
+    border: none;
+    background-color: cadetblue;
+    padding: 15px;
+    font-size: 18px;
+}

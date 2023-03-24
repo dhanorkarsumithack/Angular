@@ -1,0 +1,20 @@
+.container{
+    height: auto;
+    width: auto;
+    display: block;
+    justify-content: center;
+    background-color: rgb(188, 188, 188);
+
+    padding: 20px;
+}
+input{
+    height: 30px;
+    width: 200px;
+    border: none;
+    margin: 50px;
+}
+
+button{
+    height: 30px;
+    width: 100px;
+}

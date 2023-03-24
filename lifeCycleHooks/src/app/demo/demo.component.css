@@ -1,0 +1,12 @@
+.demo{
+    height: 150px;
+    width: auto;
+    border: 1px solid green;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+p{
+   padding: 20px;
+
+}

@@ -1,0 +1,29 @@
+.container{
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+}
+
+.change-font{
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+.info-container{
+    margin: 10px 30px;
+    padding: 10px 30px;
+}
+
+.btn{
+    width: 120px;
+    height: 35px;
+    border: none;
+}
+
+.btn-notice{
+    margin: 10px 30px;
+    background-color: #F58041;
+}
